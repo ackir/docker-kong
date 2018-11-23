@@ -40,3 +40,11 @@ services:
     restart: on-failure
     stdin_open: true
     tty: true
+
+  konga:
+    image: pantsel/konga
+    environment:
+      NODE_ENV: development
+      TOKEN_SECRET: 123
+    ports:
+      - 8010:1337
